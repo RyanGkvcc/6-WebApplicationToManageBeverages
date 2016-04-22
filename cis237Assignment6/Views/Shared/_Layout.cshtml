@@ -24,6 +24,15 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    @*Check to see if the user is authenticated. If so, we
+                        can render out the nav link to the foo page*@
+                    @if (Request.IsAuthenticated)
+                    {
+                        @*Added a new link for the foo page. Parameters are
+                            Text, Method (Action), Controller*@
+                        <li>@Html.ActionLink("Beverages", "Index", "Beverage")</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
