@@ -2,7 +2,7 @@
 
 ## Due 04-27-2016
 
-## Author
+## Author : Ryan Gowan
 
 ## Description
 
@@ -114,8 +114,8 @@ If you get an error related to Owin, you need to go into your
 browser and delete all your cookies. I'm sure only a few are
 the culprit, but I don't know which ones.
 
-## Outside Resources Used
+## Outside Resources Used : None
 
-## Known Problems, Issues, And/Or Errors in the Program
+## Known Problems, Issues, And/Or Errors in the Program : None
 
 
