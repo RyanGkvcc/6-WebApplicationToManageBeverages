@@ -6,6 +6,36 @@
 
 <h2>Index</h2>
 
+@*Filter content to be displayed on the web page*@
+<div class="form-group">
+    <fieldset>
+        <legend>Search Filter</legend>
+        @{
+            using (Html.BeginForm("Filter", "Beverage", FormMethod.Post, new { @class = "form-inline" }))
+            {
+                //This is a CSRF (Cross Site Request Forgery) Token
+                @Html.AntiForgeryToken()
+
+                <label for="name">Name</label>
+                @Html.TextBox("name", (string)ViewBag.filterName)
+                <span>&nbsp</span>
+                <label for="pack">Pack</label>
+                @Html.TextBox("pack", (string)ViewBag.filterPack)
+                <span>&nbsp</span>
+                <label for="min">Minimum Price</label>
+                @Html.TextBox("min", (string)ViewBag.filterMin)
+                <span>&nbsp</span>
+                <label for="max">Maximum Price</label>
+                @Html.TextBox("max", (string)ViewBag.filterMax)
+                <br />
+                <input type="submit" value="Filter" class="btn btn-info pull-right" />
+            }
+        }
+    </fieldset>
+</div>
+
+
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
