@@ -29,12 +29,12 @@ namespace cis237Assignment6.Controllers
             string filterMin = "";
             string filterMax = "";
 
-            //Define a min and max for the cylinders
+            //Define a min and max for the price
             decimal min = 0m;
             decimal max = 999999m;
 
 
-            //Check to see f there is a value in the session, and if there is, assign it
+            //Check to see if there is a value in the session, and if there is, assign it
             //to the variable that we setup to hold the value
             if (Session["name"] != null && !String.IsNullOrWhiteSpace((string)Session["name"]))
             {
@@ -61,7 +61,7 @@ namespace cis237Assignment6.Controllers
             //Do the filter on the CarsToFilter Dataset. Use the where that we used before
             //when doing EF work, only this time send in more lambda expressions to narrow it
             //down further. Since we setup default values for each of the filter parameters,
-            //min, max, and filterMake, we can count on this always running with no errors.
+            //min, max, filterName, and filterPack, we can count on this always running with no errors.
             IEnumerable<Beverage> filtered = BeveragesToFilter.Where(beverage => beverage.price >= min &&
                                                                   beverage.price <= max &&
                                                                   beverage.name.Contains(filterName) &&
@@ -79,7 +79,7 @@ namespace cis237Assignment6.Controllers
             ViewBag.filterMax = filterMax;
 
 
-            //Return the view with a filtered selectionof the cars.
+            //Return the view with a filtered selection of the beverages.
             return View(finalFiltered);
 
             //This is what used to be returned before a filter was setup.

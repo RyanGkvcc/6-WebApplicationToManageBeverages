@@ -49,7 +49,7 @@ The list of updatable fields are as follows:
 
 * Description
 * Pack
-* Pack
+* Price
 * Active
 
 Here is a reminder of how to connect to your Beverage Database.

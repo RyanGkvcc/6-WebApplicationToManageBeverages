@@ -1,4 +1,24 @@
-﻿using System;
+﻿///Programmer:  Ryan Gowan
+///Date:        4/26/2016
+///POV:         What are you suppossed to learn from this project.
+///                 Update the Assignment 5 with Wines to use a database in a web application.
+///                 Web app, Entity Framework, MVC, Models, Views, Controllers, Layouts 
+///                 Database, Filter, Authorize, C# and Html seperate and together, and CRUD.
+///             Populate a list of beverages that have the following properties: id, name, pack, price and active.
+///             Must have the ability to Add, Edit, Delete, and Filter beverages using a wab application.
+///                            
+///BOV:         Purpose of this project, if any.
+///                 The ability to create and utilize a web application usning Entity Framework.
+///                 The ability to implement MVC.
+///                 The ability to Add, Edit, Delete, and Filter beverages within the database using a wab application.
+///                 The ability to display information within a web browser.
+
+//  This project shows Documentation comments, above.
+/*  Notes:
+ *  ???/100
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
